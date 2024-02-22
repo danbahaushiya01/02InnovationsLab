@@ -699,6 +699,11 @@ video {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -793,6 +798,11 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
 .text-blue-800 {
   --tw-text-opacity: 1;
   color: rgb(30 64 175 / var(--tw-text-opacity));
@@ -845,23 +855,33 @@ body{
 }
 
 .logo{
-  color:#122853;
+  color: #014dd5;
   font-weight: 700;
   font-size: 1.4rem;
+  display: flex;
+  align-items: center;
 }
 
-.logo span{
-  background-color: #014dd5;
-  color: #ffffff;
+.logo img{
   padding: 0px 5px;
-  border-radius: 5px;
-  font-weight: 600;
+  border-radius: 10px;
   margin-right: 5px;
+  width: 120px;
+  height: 90px;
 }
 
 .nav-button button:hover{
-  background:orange;
+  background:#122853;
   transition: 0.5s;
+}
+
+.nav-items a:hover{
+  color:#122853;
+  transition: 0.5s;
+}
+
+.nav-items a{
+  font-size:20px;
 }
 
 /* header */
@@ -881,9 +901,9 @@ body{
 }
 
 .header-btn a:hover{
-  border: 1px solid black;
-  color: black;
-  background: wheat;
+  border: 1px solid #1453d3;
+  color: #ffffff;
+  background: #122853;
   transition: 0.5s;
 }
 
@@ -917,9 +937,9 @@ body{
 }
 
 .course-btn a:hover{
-  border: 1px solid black;
-  background: wheat;
-  color: black;
+  border: 2px solid #1453d3;
+  background:#122853;
+  color: #ffffff;
   font-weight: 200;
   transition: 0.5s;
 }
@@ -1083,9 +1103,9 @@ input[type="radio"]{
 }
 
 .read a:hover{
-  border: 1px solid black;
-  color: black;
-  background: wheat;
+  border: 2px solid #1453d3;
+  color: #ffffff;
+  background: #122853;
   transition: 0.5s;
 }
 
@@ -1192,10 +1212,6 @@ footer{
   line-height: 1.4rem;
 }
 
-.logo-footer{
-  color: #1453d3;
-}
-
 .footer-social{
   display: flex;
   align-items: center;
@@ -1212,19 +1228,20 @@ footer{
   justify-content: center;
   align-items: center;
   border: 1px solid #e9e9e9;
-  color: #333333;
+  color: #ffffff;
   font-size: 0.9rem;
   transition: all ease 0.3s;
 }
 
 .footer-social a:hover{
-  background-color: #122853;
+  background-color:#014dd5;
   color: #ffffff;
+  transition: 0.5s;
 }
 
 .footer-link-box strong{
   font-size: 1.2rem;
-  color: #1453d3;
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -1241,7 +1258,8 @@ footer{
 }
 
 .footer-container ul li a:hover{
-  color: #122853;
+  color: #014dd5;
+  transition: 0.5s;
 }
 
 .footer-bottom{
