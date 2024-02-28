@@ -7,49 +7,116 @@ header{
 
    
 }
-/* navigation bar */
-.nav-bar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    width: 90%;
-    /* background: rgb(35, 35, 155); */
-    margin: 0 auto;
-    padding: 10px;
-
-}
 body{
     /* background: rgb(8, 8, 143); */
     font-family: 'Poppins';
 
 }
+/* navigation bar */
+.nav-bar{
+    background:white;
+    padding: 5px 20px;
 
-.logo{
-    color: #014dd5;
-    font-weight: 700;
-    font-size: 1.4rem;
-    display: flex;
+    /* display: flex;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    width: 90%; */
+    /* background: rgb(35, 35, 155); */
+    /* margin: 0 auto;
+    padding: 10px; */
+
 }
-.logo img{
-    padding: 0px 5px;
-    border-radius: 10px;
-    margin-right: 5px;
-    width: 120px;
-    height: 90px;
+.nav-lists{
+    list-style: none;
 }
-.nav-button button:hover{
-    background:#122853;
-    transition: 0.5s;
-}
-.nav-items a:hover{
-    color:#122853;
-    transition: 0.5s;
+.nav-items{
+    /* display: inline-block; */
+    padding: 15px 5px;
+    font-size: 16px;
 }
 .nav-items a{
-    font-size:20px;
+    display: block;
+    text-decoration: none;
+    color: #014dd5;
+
 }
+
+.nav-items a:hover{
+    text-decoration: underline;
+    color: #122853;
+    transition: all 0.5s;
+}
+
+
+.logo img{
+
+    width: 120px;
+    height: 80px; 
+    margin-left: 5%;
+    padding: 10px;
+    /* border-radius: 5px; */
+   
+}
+.button.btn-secondary{
+    border-bottom: 1px solid #122853;
+}
+
+/* Mobile Menu */
+.nav-lists{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between ;
+    align-items: center;
+}
+
+.toggle{
+    order: 1;
+}
+.nav-items.button{
+    order:2;
+}
+.nav-items{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+.nav-items.active{
+    display: block;
+}
+
+
+
+
+
+.toggle{
+   cursor: pointer;
+}
+.bars{
+   display: inline-block;
+   height: 2px;
+   background: #999;
+   width: 18px;
+   position: relative;
+}
+.bars::before,.bars::after{
+    content: "";
+    display: inline-block;
+    height: 2px;
+    background: #999;
+    width: 18px;
+    position:absolute;
+}
+.bars::after{
+    top: -5px;
+}
+.bars::before{
+    top: 5px;
+}
+
+
+
 /* header */
 .header-content{
     max-width: 1200px;
@@ -569,4 +636,301 @@ footer{
     100%{
         left: -400%;
     }
+}
+
+
+
+
+
+
+@media all and (min-width:468px){
+    .nav-lists{
+        justify-content: center;
+    }
+    .logo{
+        flex: 1;
+    }
+    .nav-items.button{
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .button.btn-secondary{
+        border: 0;
+    }
+    .button a{
+        padding: 10px 30px;
+        border-radius: 8px;
+        background: none;
+        border: 1px solid wheat;
+    }
+    .button a:hover{
+        background: #122853;
+        text-decoration: none;
+        color: white;
+        border: 1px solid wheat;
+        transition: all 0.5s;
+    }
+  
+}
+/* Tablet screen */
+@media all and (min-width:768px){
+               .nav-items{
+                display: block;
+                width: auto;
+                order: 1;
+               }
+                    .toggle{
+                        display: none; 
+                }
+                .logo{
+                    order: 0;
+                }
+                .button{
+                    order: 2;
+                    padding-right: 0;
+                }
+
+            
+}
+
+
+/* Responsiveness */
+
+@media (max-width:480px) {
+        .main-container{
+            height: 120vh;
+        }
+        .hub-images h3{
+            font-size: 18px;
+        }
+        .hub-image{
+            height: 300px;
+        }
+        .courses-container{
+            display:grid;
+            grid-template-columns: 1fr;
+            gap:10px;
+
+        }
+        .course-text{
+            padding: 10px;
+        }
+        .courses-we-offer h3{
+            font-size: 18px;
+        }
+    
+        .header-content{
+            display:grid;
+            grid-template-columns: 1fr;
+
+        }
+        .header-image{
+            margin: auto;    
+        }
+        .header-image img{
+            width: auto;
+            height: 200px;
+            border-radius: none;
+        }
+        .header-text strong{
+            font-size: 20px;
+        }
+        .header-text p{
+            font-size:12px;
+        }
+        .testimonials{
+            display:grid;
+            grid-template-columns: 1fr;
+            gap:10px;
+        }
+        .testimonial-text p{
+            padding: 10px;
+        }
+        .test-header{
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .header-btn a{
+    padding:8px 16px;
+    margin-bottom: 10px;
+        }
+        .testimonial-celebration h3{
+            padding: 10px;
+        }
+        .testimonial-celebration p{
+            padding: 10px;
+        }
+        .faq{
+        height:120vh;
+        margin-bottom: 20px; 
+        }
+        .faq-container h2{
+            font-size: 18px;
+        }
+        .faq-items label{
+            font-size: 12px;
+        }
+        .faq-items p{
+            font-size: 12px;
+        }
+        .about-us h3{
+            font-size: 18px;
+        }
+        .au-container{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        .au-box p{
+            font-size: 12px;
+        }
+        .read {
+            margin-bottom: 10px;
+        }
+        .read a{
+            padding:8px 10px;
+            font-size: 12px;
+        
+        }
+        .partnership h3{
+            font-size: 18px;
+        }
+        .partnership-container{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .partners-box{
+            padding: 10px;
+        }
+        .subscribe-container{
+            height: 200px;
+        }
+        .subscribe h3{
+            font-size: 18px;
+        }
+        .subscribe-box input{
+            font-size: 12px;
+            width: 100%;
+        }
+        .subscribe-box button{
+            border-radius: 4px;
+            max-width: 100px;
+            width: 100%;
+            font-size: 10px;
+            padding: 10px 20px;
+        }
+        .footer-container{
+            display:  grid;
+            grid-template-columns: 1fr;
+        }
+        .footer-company-box p{
+        font-size: 12px;
+        }
+        .footer-social a{
+            width: 30px;
+            height: 30px;
+        }
+        .footer-link-box{
+            margin-top: 10px;
+        }
+        .header-content{
+            display: grid;
+            grid-template-columns: 1fr;
+
+        }
+    
+        .header-container{
+            height: 140vh;
+        }
+        .header-content span{
+            font-size: 12px;
+        }
+        .partner-img{
+            height: 400px;
+            width: 300px;
+          
+        }
+    
+    
+
+   }
+@media (max-width:380px){
+    .subscribe-container{
+        height: 300px;
+        padding: 40px auto;
+        line-height: 0.3vh;
+    }
+    .subscribe-container h3{
+        font-size: 12px;
+        
+    }
+    .subscribe-box input{
+         font-size: 12px;
+         width: 100%;
+    }
+    .subscribe-box button{
+        border-radius: 4px;
+        max-width: 100px;
+        width: 100%;
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+}
+@media (max-width:323px) {
+    .header-image img{
+        width: auto;
+        height: 200px;
+        border-radius: none;
+}   
+.header-btn a{
+   padding:8px 16px;
+   margin-bottom: 10px;
+}
+
+}
+@media all and (max-width:768px){
+        /* header */
+        .header-container{
+            height: 100vh;
+        }
+        .header-text span{
+            font-size: 12px;
+        }
+        .header-text strong{
+            font-size: 20px;
+        }
+        .header-text p{
+            font-size: 10px;
+        }
+        .header-btn a{
+            padding:8px 8px;
+            margin-bottom: 10px;
+        }
+        .hub-images h3,
+        .courses-we-offer h3,
+        .test-header,
+        .faq-container h2,
+        .about-us h3,
+        .partnership h3,
+        .subscribe-container h3{
+            font-size: 18px;
+            margin: 20px auto;
+        }
+
+    .courses-container,
+    .partnership-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .course-box img{
+        width: 100%;
+        max-height:100%;
+    }
+    .faq{
+        height:120vh;
+        margin-bottom: 20px; 
+        }
+        
+    
 }
